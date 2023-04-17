@@ -23,6 +23,5 @@ scrabble = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1,
 word = input('Введите слово с маленькой буквы: ')
 sum = 0
 for i in range(len(word)):
-    if word[i] in scrabble:
-        sum += scrabble.get(word[i])
+    sum += scrabble.get(word[i])
 print(f'За слово {word} вы получите {sum} очков')
