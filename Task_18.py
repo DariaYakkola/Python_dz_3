@@ -6,7 +6,6 @@
 from random import randint
 size = int(input('Сколько будет элементов? '))
 array = [randint(1, 10) for _ in range(size)]
-print(array)
 number = int(input('Введите число: '))
 min_minus = min_result = array[0]
 for i in range(size):
@@ -16,4 +15,7 @@ for i in range(size):
     if (result < min_result) and (result != 0):
         min_result = result
         min_minus = array[i]
-print(min_minus)
+        if min_result == 1:
+            break
+print(f'В массиве {array} ближайшее по величине к числу '
+      f'{number} - это число {min_minus}')
